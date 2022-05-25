@@ -19,7 +19,7 @@ const Hero = () => {
           </ul>
           <Social />
           <div className='flex flex-col sm:flex-row sm:justify-center gap-4 mt-6'>
-            <Link passHref href='https://github.com/izuolan/next-craft'>
+            <Link passHref href='https://github.com/lhj-web'>
               <button className='bg-white shadow-md dark:bg-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 inline-flex py-3 px-5 rounded-lg items-center'>
                 <svg
                   className='inline-block text-gray-600 dark:text-day h-8 w-8'
@@ -42,7 +42,7 @@ const Hero = () => {
                 </span>
               </button>
             </Link>
-            <Link passHref href='https://zuolan.me/en/next_craft_en'>
+            <Link passHref href='https://blog-by-craft.vercel.app'>
               <button className='bg-white shadow-md dark:bg-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 inline-flex py-3 px-5 rounded-lg items-center'>
                 <svg
                   className='inline-block text-gray-600 dark:text-day h-8 w-8'
