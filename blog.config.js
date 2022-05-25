@@ -19,8 +19,8 @@ const BLOG = {
   },
   notesLink: {
     index: '/',
-    blog: 'https://zuolan.me',
-    contact: 'https://zuolan.me/contact'
+    blog: 'https://blog-by-craft.vercel.app',
+    contact: 'https://blog-by-craft.vercel.app/contact'
   },
   socialLink: {
     github: 'https://github.com/lhj-web',
