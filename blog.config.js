@@ -1,6 +1,6 @@
 const BLOG = {
-  title: 'NextCraft',
-  author: 'Zuo Lan',
+  title: 'Blog-By-Craft',
+  author: 'Name6',
   link: 'https://blog-by-craft.vercel.app',
   description: '山光悦鸟性，潭影空人心',
   lang: 'zh-CN', // ['en-US', 'zh-CN', 'zh-HK', 'zh-TW']
@@ -23,7 +23,7 @@ const BLOG = {
     contact: 'https://blog-by-craft.vercel.app/contact'
   },
   socialLink: {
-    github: 'https://github.com/lhj-web',
+    github: 'https://github.com/lhj-web'
   },
   seo: {
     keywords: ['Blog', 'Craft.do', 'Craft Docs', 'Next.js', 'TailwindCSS']
@@ -32,7 +32,7 @@ const BLOG = {
     provider: '', // Currently support Umami, fill with 'umami' to enable or leave it empty to disable it.
     umamiConfig: {
       scriptUrl: '', // The url of your Umami script
-      websiteId: '', // The website id of your Umami instance
+      websiteId: '' // The website id of your Umami instance
     }
   },
   isProd: process.env.VERCEL_ENV === 'production' // distinguish between development and production environment (ref: https://vercel.com/docs/environment-variables#system-environment-variables)
