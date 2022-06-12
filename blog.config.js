@@ -14,9 +14,9 @@ const BLOG = {
   ogImageGenerateURL: 'https://og-zl.vercel.app', // The link to generate OG image, don't end with a slash
   craftConfigShareUrl: 'https://www.craft.do/s/K9XaIzHKp20R9C', // The link to share your craft config
   notesNav: {
-    index: 'Home',
-    blog: 'My Blog',
-    contact: 'Contact'
+    index: '主页',
+    blog: '我的博客',
+    contact: '联系我'
   },
   notesLink: {
     index: '/',

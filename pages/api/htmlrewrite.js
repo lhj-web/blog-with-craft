@@ -168,9 +168,9 @@ const headStr = `
     }
 
     .navigation__checkbox:checked ~ .navigation__background {
-      background: #edeeee;
-      transform: scale(20);
-      box-shadow: 0 0 1px rgb(0 0 0 / 20%);
+      background: #F6F8FA;
+      transform: rotate(45deg) translateX(12px) translateY(12px);
+      box-shadow: 0 0 20px rgb(0 0 0 / 20%);
       height: 500px;
       width: 500px;
       right: -160px;
