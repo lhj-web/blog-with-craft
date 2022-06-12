@@ -1,7 +1,7 @@
 const BLOG = {
   title: 'Blog-By-Craft',
   author: 'Name6',
-  link: 'https://blog-by-craft.vercel.app',
+  link: 'https://blog.water6.ltd',
   description: '山光悦鸟性，潭影空人心',
   lang: 'zh-CN', // ['en-US', 'zh-CN', 'zh-HK', 'zh-TW']
   appearance: 'auto', // ['light', 'dark', 'auto'],
@@ -9,18 +9,19 @@ const BLOG = {
   lightBackground: '#F2F2F2', // use hex value, don't forget '#' e.g #fffefc
   darkBackground: '#212936', // use hex value, don't forget '#'
   since: 2022, // If leave this empty, current year will be used.
+  showTitlebarText: 'false',
   autoCollapsedNavBar: false, // The automatically collapsed navigation bar
   ogImageGenerateURL: 'https://og-zl.vercel.app', // The link to generate OG image, don't end with a slash
   craftConfigShareUrl: 'https://www.craft.do/s/K9XaIzHKp20R9C', // The link to share your craft config
   notesNav: {
-    index: 'Home',
-    blog: 'My Blog',
-    contact: 'Contact'
+    index: 'Home'
+    // blog: 'My Blog'
+    // contact: 'Contact'
   },
   notesLink: {
     index: '/',
-    blog: 'https://blog-by-craft.vercel.app',
-    contact: 'https://blog-by-craft.vercel.app/contact'
+    blog: 'https://blog.water6.ltd/en',
+    contact: 'https://blog.water6.ltd/en/contact'
   },
   socialLink: {
     github: 'https://github.com/lhj-web'
