@@ -12,10 +12,8 @@ module.exports = async (req, res) => {
   const removeCraftText = originResText
     .replace('"https://www.craft.do"', '"/"') // Replace logo url
     // .replace(/children:\(0,vr.jsx\)\("svg".*\}\)\]\}\)\}\)/, '') // remove Craft.do logo
-    .replace(
-      /children:\(0,vr.jsx\)\("svg",{/,
-      'children:(0,vr.jsx)("svg",{style:{display:"none"},'
-    ) // Hide Craft.do logo
+    .replace('?utm_source=CraftShare', '') // Replace logo url
+    .replace('flex items-start group"', 'flex items-start group",style:{visibility:"hidden"}') // Hide Craft.do upper right corner logo
 
     .replace(
       /\("svg",\{className:e.className.*id:"blue"\}\)\]\}\)\}\)\}\)/,
