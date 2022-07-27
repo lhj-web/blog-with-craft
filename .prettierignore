@@ -1,9 +1,0 @@
-build/
-dist/
-node_modules/
-.next/
-.vercel/
-
-.demo/
-.renderer/
-pnpm-lock.yaml
