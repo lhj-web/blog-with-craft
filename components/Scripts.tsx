@@ -1,12 +1,12 @@
-import Script from 'next/script'
-import BLOG from '@/blog.config'
+import Script from 'next/script';
+import BLOG from '@/blog.config';
 
 const Scripts = () => (
   <>
     {BLOG.isProd && BLOG.analytics.provider === 'umami' && (
       <Script
         src={BLOG.analytics.umamiConfig.scriptUrl}
-        strategy='afterInteractive'
+        strategy="afterInteractive"
         data-website-id={BLOG.analytics.umamiConfig.websiteId}
       />
     )}
@@ -28,6 +28,6 @@ const Scripts = () => (
       </Script>
     )} */}
   </>
-)
+);
 
-export default Scripts
+export default Scripts;

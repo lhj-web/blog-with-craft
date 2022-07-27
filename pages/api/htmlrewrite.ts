@@ -1,65 +1,7 @@
-import { getAllNotes } from '@/lib/craft'
-import BLOG from '@/blog.config'
+import type { NextApiRequest, NextApiResponse } from 'next';
 
-module.exports = async (req, res) => {
-  const { pathname, slug } = req.query
-  console.log('pathname: ', pathname)
-  console.log('slug: ', slug)
-
-  const noteItem = await getNoteItem(pathname)
-  console.log('htmlrewrite noteItem: ', noteItem)
-  if (noteItem === undefined) {
-    res.statusCode = 404
-    res.end(
-      'Notes Not Found, Make sure you have the correct pathname and check your Craft.do setting page.'
-    )
-    return
-  }
-  const craftUrl = noteItem.link
-
-  // console.log('htmlrewrite craftUrl: ', craftUrl)
-  const response = await fetch(craftUrl)
-  const originResText = await response.text()
-  const modifyResText = originResText
-    .replace('<meta name="robots" content="noindex">', '')
-    .replace(
-      '<link rel="icon" href="/share/static/favicon.ico">',
-      '<link rel="icon" href="/favicon.svg">'
-    )
-    .replace(
-      '<link rel="apple-touch-icon" href="/share/static/logo-192.png">',
-      '<link rel="apple-touch-icon" href="/apple-touch-icon.png">'
-    )
-    .replace(
-      '<link href="https://fonts.googleapis.com/css?family=Roboto+Mono:300,300i,400,400i,500,500i,700,700i&amp;display=swap" rel="stylesheet"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&amp;display=swap" rel="stylesheet">',
-      ''
-    )
-    .replace(
-      '<meta name="luki:api-endpoint" content="https://www.craft.do/api">',
-      '<meta name="luki:api-endpoint" content="/api">'
-    )
-    .replace(
-      '<script async src="https://www.craft.do/assets/js/analytics2.js"></script>',
-      ''
-    )
-    .replace('</head><body', headStr + '</head><body')
-    .replace('</body></html>', bodyStr + '</body></html>')
-
-  res.setHeader('Content-Type', 'text/html; charset=utf-8')
-  res.send(modifyResText)
-}
-
-async function getNoteItem(path) {
-  const notesObj = await getAllNotes()
-  for (let i = 0; i < notesObj.length; i++) {
-    const noteItem = notesObj[i]
-    console.log('getNoteItem path: ', path)
-    console.log('getNoteItem noteItem: ', noteItem)
-    if (path === noteItem.path) {
-      return noteItem
-    }
-  }
-}
+import { getAllNotes } from '@/lib/craft';
+import BLOG from '@/blog.config';
 
 const headStr = `
   <style>
@@ -199,14 +141,13 @@ const headStr = `
       font-size: 0.8rem;
     }
   </style>
-`
+`;
 
 /* You can adjust to use images, rather than svg.
 <a aria-label="toggle navigation menu" class="navigation__logo">
   <img alt="logo" class="logo" src="/favicon.svg" />
 </a>
 */
-
 const bodyStr = `
   <div class="navigation">
     <input type="checkbox" class="navigation__checkbox" id="nav-toggle" />
@@ -241,4 +182,64 @@ const bodyStr = `
     </div>
 
   </div>
-`
+`;
+
+export default async (req: NextApiRequest, res: NextApiResponse) => {
+  const { pathname } = req.query;
+  // console.log('pathname: ', pathname);
+  // console.log('slug: ', slug);
+
+  const noteItem = await getNoteItem(pathname as string);
+  // console.log('htmlrewrite noteItem: ', noteItem);
+  if (noteItem === undefined) {
+    res.statusCode = 404;
+    res.end(
+      'Notes Not Found, Make sure you have the correct pathname and check your Craft.do setting page.',
+    );
+    return;
+  }
+  const craftUrl = noteItem.link;
+
+  // console.log('htmlrewrite craftUrl: ', craftUrl)
+  const response = await fetch(craftUrl);
+  const originResText = await response.text();
+  const modifyResText = originResText
+    .replace('<meta name="robots" content="noindex">', '')
+    .replace(
+      '<link rel="icon" href="/share/static/favicon.ico">',
+      '<link rel="icon" href="/favicon.svg">',
+    )
+    .replace(
+      '<link rel="apple-touch-icon" href="/share/static/logo-192.png">',
+      '<link rel="apple-touch-icon" href="/apple-touch-icon.png">',
+    )
+    .replace(
+      '<link href="https://fonts.googleapis.com/css?family=Roboto+Mono:300,300i,400,400i,500,500i,700,700i&amp;display=swap" rel="stylesheet"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&amp;display=swap" rel="stylesheet">',
+      '',
+    )
+    .replace(
+      '<meta name="luki:api-endpoint" content="https://www.craft.do/api">',
+      '<meta name="luki:api-endpoint" content="/api">',
+    )
+    .replace(
+      '<script async src="https://www.craft.do/assets/js/analytics2.js"></script>',
+      '',
+    )
+    .replace('</head><body', `${headStr}</head><body`)
+    .replace('</body></html>', `${bodyStr}</body></html>`);
+
+  res.setHeader('Content-Type', 'text/html; charset=utf-8');
+  res.send(modifyResText);
+};
+
+async function getNoteItem(path: string) {
+  const notesObj = await getAllNotes();
+  for (let i = 0; i < notesObj.length; i++) {
+    const noteItem = notesObj[i];
+    // console.log('getNoteItem path: ', path);
+    // console.log('getNoteItem noteItem: ', noteItem);
+    if (path === noteItem.path)
+      return noteItem;
+  }
+}
+
