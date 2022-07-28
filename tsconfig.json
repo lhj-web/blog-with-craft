@@ -2,7 +2,7 @@
   "compilerOptions": {
     "baseUrl": ".",
     "target": "ES5",
-    "module": "CommonJS",
+    "module": "ESNext",
     "jsx": "preserve",
     "strict": true,
     "esModuleInterop": true,
@@ -31,7 +31,6 @@
   "include": [
     "next-env.d.ts",
     "**/*.ts",
-    "**/*.tsx",
-    "next.config.mjs"
+    "**/*.tsx"
   ]
 }
