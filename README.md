@@ -1,12 +1,7 @@
-# Next-Craft
+# BLOG-With-Craft
 
 Using Craft.do API and Next.js to generate a static site, and manage all content in Craft.do.
-
-## Demo
-
-[NextCraft](https://next-craft.vercel.app/)
-
-[My Blog](https://zuolan.me/notes)
+I migrated it from JS to TS.
 
 ## Quick Start
 
@@ -34,7 +29,7 @@ Replace favicon.svg, and favicon.ico in /public folder with your own
 
 Deploy to Vercel or elsewhere, done.
 
-More details in my blog: [Next Craft Guide](https://zuolan.me/en/next_craft_en)
+For more details refer to [Next Craft Guide](https://zuolan.me/en/next_craft_en)
 
 ## License
 
