@@ -1,12 +1,7 @@
 export const lang = {
   zh: {
-    NAV: {
-      INDEX: '主题一',
-      THEME2: '主题二',
-      THEME3: '主题三',
-    },
     HERO: {
-      TEXT_HEAD: '你好, 这是一个使用 Craft.do 分享页面生成个人网站的演示. 它可以:',
+      TEXT_HEAD: '这是由 Craft.do 分享页面生成的个人笔记 / 博客. 功能有:',
       TEXT_1: '在 Craft.do 中管理站点文章',
       TEXT_2: '自定义 Craft.do 分享页面的路径',
       TEXT_3: '修改 Craft.do 页面的外观',
@@ -31,13 +26,8 @@ export const lang = {
     },
   },
   en: {
-    NAV: {
-      INDEX: 'Theme 1',
-      THEME2: 'Theme 2',
-      THEME3: 'Theme 3',
-    },
     HERO: {
-      TEXT_HEAD: 'Hi, this is a demo about using Craft.do pages to generate a blog.',
+      TEXT_HEAD: 'Hi, this site is using Craft.do pages to generate a blog. Features:',
       TEXT_1: 'Manage all blog posts in Craft.do',
       TEXT_2: 'Customize path of your Craft.do pages',
       TEXT_3: 'Customize style of your Craft.do pages',

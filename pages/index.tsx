@@ -1,9 +1,9 @@
 import type { NoteType } from '@/lib/craft';
 
+import BLOG from '@/blog.config';
 import Container from '@/components/Container';
 import NotePost3 from '@/components/NotePost';
 import { getAllNotes } from '@/lib/craft';
-import BLOG from '@/blog.config';
 import Hero from '@/components/Hero';
 
 export async function getStaticProps() {

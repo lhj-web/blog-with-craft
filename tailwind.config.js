@@ -1,19 +1,24 @@
-const BLOG = require('./blog.config')
-const { fontFamily } = require('tailwindcss/defaultTheme')
+const { fontFamily } = require('tailwindcss/defaultTheme');
 
+const themeColors = {
+  lightBackground: '#F2F2F2',
+  darkBackground: '#212936',
+};
+
+/** @type {import('tailwindcss').Config} */
 module.exports = {
   mode: 'jit',
-  content: ['./pages/**/*.js', './components/**/*.js'],
+  content: ['./pages/**/*.{ts,tsx}', './components/**/*.{ts,tsx}'],
   darkMode: 'class', // or 'media' or 'class'
   theme: {
     extend: {
       colors: {
         day: {
-          DEFAULT: BLOG.lightBackground || '#ffffff'
+          DEFAULT: themeColors.lightBackground || '#ffffff',
         },
         night: {
-          DEFAULT: BLOG.darkBackground || '#000000'
-        }
+          DEFAULT: themeColors.darkBackground || '#000000',
+        },
       },
       fontFamily: {
         sans: [...fontFamily.sans],
@@ -23,13 +28,13 @@ module.exports = {
           'system-ui',
           '-apple-system',
           'BlinkMacSystemFont',
-          'sans-serif'
-        ]
-      }
-    }
+          'sans-serif',
+        ],
+      },
+    },
   },
   variants: {
-    extend: {}
+    extend: {},
   },
-  plugins: []
-}
+  plugins: [],
+};

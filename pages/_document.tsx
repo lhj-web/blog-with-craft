@@ -1,8 +1,10 @@
+import type { DocumentContext } from 'next/document';
 import Document, { Head, Html, Main, NextScript } from 'next/document';
 import BLOG from '@/blog.config';
+const { theme: { extend: { colors: { day, night } } } } = require('tailwind.config');
 
 class MyDocument extends Document {
-  static async getInitialProps(ctx) {
+  static async getInitialProps(ctx: DocumentContext) {
     const initialProps = await Document.getInitialProps(ctx);
     return { ...initialProps };
   }
@@ -18,12 +20,12 @@ class MyDocument extends Document {
             <>
               <meta
                 name="theme-color"
-                content={BLOG.lightBackground}
+                content={day.default}
                 media="(prefers-color-scheme: light)"
               />
               <meta
                 name="theme-color"
-                content={BLOG.darkBackground}
+                content={night.default}
                 media="(prefers-color-scheme: dark)"
               />
             </>
@@ -33,8 +35,8 @@ class MyDocument extends Document {
               name="theme-color"
               content={
                 BLOG.appearance === 'dark'
-                  ? BLOG.darkBackground
-                  : BLOG.lightBackground
+                  ? night.default
+                  : day.default
               }
             />
               )}

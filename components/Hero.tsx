@@ -2,7 +2,6 @@ import Link from 'next/link';
 import { useRouter } from 'next/router';
 import { lang } from '@/lib/lang';
 import Avatar from './Avatar';
-import Social from './Social';
 
 const Hero = () => {
   const { locale } = useRouter();
@@ -17,9 +16,8 @@ const Hero = () => {
             <li className="list-disc">{t.HERO.TEXT_2}</li>
             <li className="list-disc">{t.HERO.TEXT_3}</li>
           </ul>
-          <Social />
           <div className="flex flex-col sm:flex-row sm:justify-center gap-4 mt-6">
-            <Link passHref href="https://github.com/lhj-web">
+            <Link passHref href="https://github.com/lhj-web/blog">
               <button className="bg-white shadow-md dark:bg-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 inline-flex py-3 px-5 rounded-lg items-center">
                 <svg
                   className="inline-block text-gray-600 dark:text-day h-8 w-8"
@@ -42,7 +40,7 @@ const Hero = () => {
                 </span>
               </button>
             </Link>
-            <Link passHref href="https://blog-by-craft.vercel.app">
+            {/* <Link passHref href="https://blog-by-craft.vercel.app">
               <button className="bg-white shadow-md dark:bg-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 inline-flex py-3 px-5 rounded-lg items-center">
                 <svg
                   className="inline-block text-gray-600 dark:text-day h-8 w-8"
@@ -67,7 +65,7 @@ const Hero = () => {
                   </span>
                 </span>
               </button>
-            </Link>
+            </Link> */}
           </div>
           <div className="text-gray-400 text-xs font-light py-4">
             {t.HERO.NOTICE_TEXT}

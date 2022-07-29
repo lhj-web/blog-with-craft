@@ -3,16 +3,9 @@ export interface BlogConfig {
   author: string;
   link: string;
   description: string;
-  lang?: 'zh-CN' | 'en' | any;
+  lang?: 'zh' | 'en' | any;
   appearance?: 'light' | 'dark' | 'auto';
   font?: 'sans-serif' | 'serif';
-  /**
-   * @description light mode color
-   *
-   * use hex value, don't forget '#' e.g #fffefc
-   */
-  lightBackground: string;
-  darkBackground: string;
   /**
    * @description If leave this empty, current year will be used
    */

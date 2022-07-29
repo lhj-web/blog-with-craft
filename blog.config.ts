@@ -1,15 +1,12 @@
 import type { BlogConfig } from '@/interfaces/config';
 
-const blog: BlogConfig = {
-  title: 'Blog-By-Craft',
+const BLOG: BlogConfig = {
+  title: 'Blog',
   author: 'Name6',
   link: 'https://blog.water6.ltd',
   description: '山光悦鸟性，潭影空人心',
-  lang: 'zh-CN', // ['en-US', 'zh-CN', 'zh-HK', 'zh-TW']
   appearance: 'auto', // ['light', 'dark', 'auto'],
   font: 'sans-serif', // ['sans-serif', 'serif']
-  lightBackground: '#F2F2F2',
-  darkBackground: '#212936', // use hex value, don't forget '#'
   since: 2022,
   showTitleBarText: 'false',
   autoCollapsedNavBar: false,
@@ -41,4 +38,4 @@ const blog: BlogConfig = {
   isProd: process.env.VERCEL_ENV === 'production', // distinguish between development and production environment (ref: https://vercel.com/docs/environment-variables#system-environment-variables)
 };
 
-export default blog;
+export default BLOG;
