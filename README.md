@@ -1,5 +1,7 @@
 # BLOG-With-Craft
 
+English | **[中文](./README.zh-CN.md)**
+
 Using Craft.do API and Next.js to generate a static site, and manage all content in Craft.do.
 I migrated it from JS to TS.
 

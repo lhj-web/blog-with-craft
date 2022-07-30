@@ -1,5 +1,7 @@
 # BLOG-With-Craft
 
+中文 | **[English](./README.md)**
+
 使用 Craft.do API 和 Next.js 框架生成一个静态站点，并且所有内容都在Craft中管理。
 我将该项目迁移到了TypeScript。
 ## 快速开始
