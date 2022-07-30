@@ -3,7 +3,7 @@ import { MoonIcon, SunIcon } from '@heroicons/react/outline';
 import { useTheme } from 'next-themes';
 
 const ThemeSwitcher = () => {
-  const { theme, setTheme } = useTheme();
+  const { theme, setTheme, resolvedTheme, systemTheme } = useTheme();
   const [hasMounted, setHasMounted] = useState(false);
 
   useEffect(() => {
@@ -15,7 +15,11 @@ const ThemeSwitcher = () => {
         // title={`Toggle theme - current ${theme}`}
         onClick={() =>
           setTheme(
-            theme === 'light' ? 'dark' : theme === 'system' ? 'dark' : 'light',
+            theme === 'light'
+              ? systemTheme === 'dark' ? 'system' : 'dark'
+              : theme === 'system'
+                ? resolvedTheme === 'light' ? 'dark' : 'light'
+                : systemTheme === 'light' ? 'system' : 'light',
           )
         }
         className="ml-1 hover:bg-gray-200 dark:hover:bg-gray-700 p-2 cursor-pointer rounded-lg dark:text-gray-50"

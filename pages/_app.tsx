@@ -6,7 +6,7 @@ import '@/styles/globals.css';
 function MyApp({ Component, pageProps }: AppProps) {
   return (
     <>
-      <ThemeProvider attribute="class">
+      <ThemeProvider attribute="class" enableSystem>
         <Component {...pageProps} />
       </ThemeProvider>
     </>
