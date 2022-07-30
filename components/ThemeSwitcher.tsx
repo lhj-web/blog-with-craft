@@ -16,7 +16,9 @@ const ThemeSwitcher = () => {
         onClick={() =>
           setTheme(
             theme === 'light'
-              ? systemTheme === 'dark' ? 'system' : 'dark'
+              ? systemTheme === 'dark'
+                ? 'system'
+                : 'dark'
               : theme === 'system'
                 ? resolvedTheme === 'light' ? 'dark' : 'light'
                 : systemTheme === 'light' ? 'system' : 'light',
@@ -24,13 +26,15 @@ const ThemeSwitcher = () => {
         }
         className="ml-1 hover:bg-gray-200 dark:hover:bg-gray-700 p-2 cursor-pointer rounded-lg dark:text-gray-50"
       >
-        {hasMounted && theme === 'dark'
-          ? (
-          <MoonIcon className="h-5 w-5" />
-            )
-          : (
-          <SunIcon className="h-5 w-5" />
-            )}
+        {
+          hasMounted && theme === 'system'
+            ? resolvedTheme === 'light'
+              ? <SunIcon className="h-5 w-5" />
+              : <MoonIcon className="h-5 w-5" />
+            : theme === 'light'
+              ? <SunIcon className="h-5 w-5" />
+              : <MoonIcon className="h-5 w-5" />
+        }
       </button>
     </>
   );
