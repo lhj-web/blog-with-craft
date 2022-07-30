@@ -20,12 +20,12 @@ class MyDocument extends Document {
             <>
               <meta
                 name="theme-color"
-                content={day.default}
+                content={day.DEFAULT}
                 media="(prefers-color-scheme: light)"
               />
               <meta
                 name="theme-color"
-                content={night.default}
+                content={night.DEFAULT}
                 media="(prefers-color-scheme: dark)"
               />
             </>
