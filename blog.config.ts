@@ -1,8 +1,8 @@
 import type { BlogConfig } from '@/interfaces/config';
 
 const BLOG: BlogConfig = {
-  title: 'Name6‘s notes',
-  author: 'Name6',
+  title: 'Name 6',
+  author: 'name6',
   link: 'https://blog.water6.ltd',
   description: '山光悦鸟性，潭影空人心',
   appearance: 'auto', // ['light', 'dark', 'auto'],
@@ -26,7 +26,7 @@ const BLOG: BlogConfig = {
     github: 'https://github.com/lhj-web',
   },
   seo: {
-    keywords: ['Blog', 'Craft.do', 'Craft Docs', 'Next.js', 'TailwindCSS'],
+    keywords: ['Blog', 'Craft.do', 'Craft Docs', 'Next.js', 'Name 6', 'name6', 'notes', '笔记', 'Name 6的博客', 'Name 6的笔记'],
   },
   // analytics: {
   //   provider: '',
