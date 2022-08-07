@@ -15,6 +15,7 @@ class MyDocument extends Document {
         <Head>
           <link rel="icon" href="/favicon.ico" />
           <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+          <meta name="author" content={BLOG.author} />
           {BLOG.appearance === 'auto'
             ? (
             <>

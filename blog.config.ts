@@ -2,7 +2,7 @@ import type { BlogConfig } from '@/interfaces/config';
 
 const BLOG: BlogConfig = {
   title: 'Name 6',
-  author: 'name6',
+  author: 'Name 6',
   link: 'https://blog.water6.ltd',
   description: '山光悦鸟性，潭影空人心',
   appearance: 'auto', // ['light', 'dark', 'auto'],

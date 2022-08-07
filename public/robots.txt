@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://blog.water6.ltd
+
+# Sitemaps
+Sitemap: https://blog.water6.ltd/sitemap.xml
