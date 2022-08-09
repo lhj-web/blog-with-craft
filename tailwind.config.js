@@ -1,7 +1,7 @@
 const { fontFamily } = require('tailwindcss/defaultTheme');
 
 const themeColors = {
-  lightBackground: '#F2F2F2',
+  lightBackground: '#F6F8FA',
   darkBackground: '#212936',
 };
 
