@@ -16,6 +16,7 @@ class MyDocument extends Document {
           <link rel="icon" href="/favicon.ico" />
           <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
           <meta name="author" content={BLOG.author} />
+          <meta name="baidu-site-verification" content="code-J4jkHpixMQ" />
           {BLOG.appearance === 'auto'
             ? (
             <>
