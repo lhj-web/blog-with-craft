@@ -1,22 +1,22 @@
-import { useEffect, useRef, useState } from 'react';
-import Link from 'next/link';
-import { useRouter } from 'next/router';
-import { ColorSwatchIcon, MenuIcon } from '@heroicons/react/outline';
-import BLOG from '@/blog.config';
-import Social from './Social';
-import ThemeSwitcher from './ThemeSwitcher';
-import LangSwitcher from './LangSwitcher';
+import { useEffect, useRef, useState } from 'react'
+import Link from 'next/link'
+import { useRouter } from 'next/router'
+import { ColorSwatchIcon, MenuIcon } from '@heroicons/react/outline'
+import BLOG from '@/blog.config'
+import Social from './Social'
+import ThemeSwitcher from './ThemeSwitcher'
+import LangSwitcher from './LangSwitcher'
 
 const NavBar = () => {
-  const router = useRouter();
-  const [showMenu, setShowMenu] = useState(false);
+  const router = useRouter()
+  const [showMenu, setShowMenu] = useState(false)
 
-  let activeMenu = '';
+  let activeMenu = ''
   if (router.query.slug)
-    activeMenu = `/${router.query.slug}`;
+    activeMenu = `/${router.query.slug}`
 
   else
-    activeMenu = router.pathname;
+    activeMenu = router.pathname
 
   const links = [
     {
@@ -26,7 +26,7 @@ const NavBar = () => {
       icon: <ColorSwatchIcon className="inline-block mb-1 h-5 w-5" />,
       show: false,
     },
-  ];
+  ]
   return (
     <div className="flex">
       <ul className="hidden md:flex md:gap-1">
@@ -82,37 +82,37 @@ const NavBar = () => {
         )}
       </div>
     </div>
-  );
-};
+  )
+}
 
 const Header = ({ navBarTitle }: { navBarTitle: string | null }) => {
-  const [showTitle, setShowTitle] = useState(false);
-  const useSticky = !BLOG.autoCollapsedNavBar;
-  const navRef = useRef<HTMLDivElement>(null);
-  const sentinelRef = useRef<HTMLDivElement>(null!);
+  const [showTitle, setShowTitle] = useState(false)
+  const useSticky = !BLOG.autoCollapsedNavBar
+  const navRef = useRef<HTMLDivElement>(null)
+  const sentinelRef = useRef<HTMLDivElement>(null!)
   const handler = ([entry]: IntersectionObserverEntry[]) => {
     if (navRef && navRef.current && useSticky) {
       if (!entry.isIntersecting && entry !== undefined)
-        navRef.current?.classList.add('sticky-nav-full');
+        navRef.current?.classList.add('sticky-nav-full')
 
       else
-        navRef.current?.classList.remove('sticky-nav-full');
+        navRef.current?.classList.remove('sticky-nav-full')
     }
     else {
-      navRef.current?.classList.add('remove-sticky');
+      navRef.current?.classList.add('remove-sticky')
     }
-  };
+  }
   useEffect(() => {
     window.addEventListener('scroll', () => {
       if (window.pageYOffset > 100)
-        setShowTitle(true);
+        setShowTitle(true)
       else
-        setShowTitle(false);
-    });
+        setShowTitle(false)
+    })
 
-    const observer = new IntersectionObserver(handler);
-    observer.observe(sentinelRef.current);
-  }, [sentinelRef]);
+    const observer = new IntersectionObserver(handler)
+    observer.observe(sentinelRef.current)
+  }, [sentinelRef])
   return (
     <>
       <div className="observer-element h-4 md:h-12" ref={sentinelRef}></div>
@@ -157,7 +157,7 @@ const Header = ({ navBarTitle }: { navBarTitle: string | null }) => {
         <NavBar />
       </div>
     </>
-  );
-};
+  )
+}
 
-export default Header;
+export default Header
