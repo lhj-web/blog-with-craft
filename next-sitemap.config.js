@@ -4,6 +4,6 @@ const config = {
   generateRobotsTxt: true, // (optional)
   sitemapSize: 7000,
   // ...other options
-};
+}
 
-module.exports = config;
+module.exports = config

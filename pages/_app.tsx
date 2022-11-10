@@ -1,8 +1,8 @@
-import type { AppProps } from 'next/app';
-import { ThemeProvider } from 'next-themes';
+import type { AppProps } from 'next/app'
+import { ThemeProvider } from 'next-themes'
 
-import '@/styles/globals.css';
-import Head from 'next/head';
+import '@/styles/globals.css'
+import Head from 'next/head'
 
 function MyApp({ Component, pageProps }: AppProps) {
   return (
@@ -14,7 +14,7 @@ function MyApp({ Component, pageProps }: AppProps) {
         <Component {...pageProps} />
       </ThemeProvider>
     </>
-  );
+  )
 }
 
-export default MyApp;
+export default MyApp

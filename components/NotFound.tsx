@@ -1,11 +1,11 @@
-import type { Props } from '@/pages/_error';
-import Link from 'next/link';
-import { useRouter } from 'next/router';
-import { lang } from '@/lib/lang';
+import type { Props } from '@/pages/_error'
+import Link from 'next/link'
+import { useRouter } from 'next/router'
+import { lang } from '@/lib/lang'
 
 const Page404 = ({ statusCode }: Props) => {
-  const { locale } = useRouter();
-  const t = lang[locale as 'zh' | 'en'];
+  const { locale } = useRouter()
+  const t = lang[locale as 'zh' | 'en']
   return (
     <div className="py-6 sm:py-8 lg:py-12">
       <div className="max-w-screen-2xl px-4 md:px-8 mx-auto">
@@ -40,7 +40,7 @@ const Page404 = ({ statusCode }: Props) => {
         </div>
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default Page404;
+export default Page404

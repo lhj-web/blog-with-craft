@@ -54,6 +54,6 @@ module.exports = {
         source: '/assets/js/analytics2.js',
         destination: 'https://www.craft.do/404',
       },
-    ];
+    ]
   },
-};
+}

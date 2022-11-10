@@ -1,19 +1,19 @@
-import type { NoteType } from '@/lib/craft';
+import type { NoteType } from '@/lib/craft'
 
-import BLOG from '@/blog.config';
-import Container from '@/components/Container';
-import NotePost3 from '@/components/NotePost';
-import { getAllNotes } from '@/lib/craft';
-import Hero from '@/components/Hero';
+import BLOG from '@/blog.config'
+import Container from '@/components/Container'
+import NotePost3 from '@/components/NotePost'
+import { getAllNotes } from '@/lib/craft'
+import Hero from '@/components/Hero'
 
 export async function getStaticProps() {
-  const notes = await getAllNotes();
+  const notes = await getAllNotes()
   return {
     props: {
       notes,
     },
     revalidate: 10,
-  };
+  }
 }
 
 const Notes = ({ notes }: { notes: NoteType[] }) => {
@@ -24,7 +24,7 @@ const Notes = ({ notes }: { notes: NoteType[] }) => {
         <NotePost3 key={note.link} note={note} />
       ))}
     </Container>
-  );
-};
+  )
+}
 
-export default Notes;
+export default Notes

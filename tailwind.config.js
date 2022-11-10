@@ -1,9 +1,9 @@
-const { fontFamily } = require('tailwindcss/defaultTheme');
+const { fontFamily } = require('tailwindcss/defaultTheme')
 
 const themeColors = {
   lightBackground: '#F6F8FA',
   darkBackground: '#212936',
-};
+}
 
 /** @type {import('tailwindcss').Config} */
 module.exports = {
@@ -37,4 +37,4 @@ module.exports = {
     extend: {},
   },
   plugins: [],
-};
+}

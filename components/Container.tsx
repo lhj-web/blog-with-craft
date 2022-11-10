@@ -1,12 +1,12 @@
-import Head from 'next/head';
-import Header from '@/components/Header';
-import Footer from '@/components/Footer';
-import BLOG from '@/blog.config';
+import Head from 'next/head'
+import Header from '@/components/Header'
+import Footer from '@/components/Footer'
+import BLOG from '@/blog.config'
 
 interface PropsType {
-  children?: React.ReactNode | React.ReactNode[];
-  layout?: string;
-  [key: string]: any;
+  children?: React.ReactNode | React.ReactNode[]
+  layout?: string
+  [key: string]: any
 }
 
 const Container = ({ children, layout, ...customMeta }: PropsType) => {
@@ -14,7 +14,7 @@ const Container = ({ children, layout, ...customMeta }: PropsType) => {
     title: BLOG.title,
     type: 'website',
     ...customMeta,
-  };
+  }
   return (
     <div>
       <Head>
@@ -89,7 +89,7 @@ const Container = ({ children, layout, ...customMeta }: PropsType) => {
         <Footer />
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default Container;
+export default Container

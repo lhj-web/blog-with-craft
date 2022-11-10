@@ -1,11 +1,11 @@
-import Link from 'next/link';
-import { useRouter } from 'next/router';
-import { lang } from '@/lib/lang';
-import Avatar from './Avatar';
+import Link from 'next/link'
+import { useRouter } from 'next/router'
+import { lang } from '@/lib/lang'
+import Avatar from './Avatar'
 
 const Hero = () => {
-  const { locale } = useRouter();
-  const t = lang[locale as 'zh' | 'en'];
+  const { locale } = useRouter()
+  const t = lang[locale as 'zh' | 'en']
   return (
     <>
       <div className="container mx-auto flex px-5 py-2 mb-10 md:flex-row flex-col items-center">
@@ -76,7 +76,7 @@ const Hero = () => {
         </div>
       </div>
     </>
-  );
-};
+  )
+}
 
-export default Hero;
+export default Hero

@@ -2,17 +2,16 @@
   "name": "blog-with-craft",
   "version": "0.0.1",
   "author": {
-    "name": "name6",
-    "email": "yufengjisuo@gmail.com"
+    "name": "Lovell Liu",
+    "email": "lovelliu@foxmail.com"
   },
   "license": "MIT",
-  "homepage": "https://blog-by-craft.vercel.app",
   "repository": {
     "type": "git",
-    "url": "https://github.com/lhj-web/blog-by-craft.git"
+    "url": "https://github.com/lovelliu/blog-by-craft.git"
   },
   "bugs": {
-    "url": "https://github.com/lhj-web/blog-by-craft/issues"
+    "url": "https://github.com/lovelliu/blog-by-craft/issues"
   },
   "scripts": {
     "dev": "next dev",
@@ -31,7 +30,7 @@
   },
   "devDependencies": {
     "@heroicons/react": "^1.0.6",
-    "@name6/eslint-config": "^0.0.6",
+    "@lovelliu/eslint-config": "^0.0.2",
     "@types/node": "^18.6.1",
     "@types/react": "^18.0.15",
     "autoprefixer": "^10.4.7",

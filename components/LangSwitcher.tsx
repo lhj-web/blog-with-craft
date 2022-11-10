@@ -1,9 +1,9 @@
-import { TranslateIcon } from '@heroicons/react/outline';
-import Link from 'next/link';
-import { useRouter } from 'next/router';
+import { TranslateIcon } from '@heroicons/react/outline'
+import Link from 'next/link'
+import { useRouter } from 'next/router'
 
 const LangSwitcher = () => {
-  const { locale, asPath } = useRouter();
+  const { locale, asPath } = useRouter()
 
   return (
     <>
@@ -13,7 +13,7 @@ const LangSwitcher = () => {
         </button>
       </Link>
     </>
-  );
-};
+  )
+}
 
-export default LangSwitcher;
+export default LangSwitcher

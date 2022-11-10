@@ -49,8 +49,8 @@ const NavBar = () => {
         )}
       </ul>
 
-      <ThemeSwitcher />
       <LangSwitcher />
+      <ThemeSwitcher />
 
       <div className="md:hidden mr-2 block ">
         <button

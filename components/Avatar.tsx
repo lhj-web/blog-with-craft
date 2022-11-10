@@ -102,6 +102,6 @@ const Avatar = (props: any) => (
       </path>
     </clipPath>
   </svg>
-);
+)
 
-export default Avatar;
+export default Avatar

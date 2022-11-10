@@ -28,6 +28,6 @@ const Scripts = () => (
       </Script>
     )} */}
   </>
-);
+)
 
-export default Scripts;
+export default Scripts

@@ -1,7 +1,7 @@
-import type { NextApiRequest, NextApiResponse } from 'next';
+import type { NextApiRequest, NextApiResponse } from 'next'
 
-import { getAllNotes } from '@/lib/craft';
-import BLOG from '@/blog.config';
+import { getAllNotes } from '@/lib/craft'
+import BLOG from '@/blog.config'
 
 const headStr = `
   <style>
@@ -142,7 +142,7 @@ const headStr = `
       font-size: 0.8rem;
     }
   </style>
-`;
+`
 
 /* You can adjust to use images, rather than svg.
 <a aria-label="toggle navigation menu" class="navigation__logo">
@@ -188,27 +188,27 @@ const bodyStr = `
     </div>
 
   </div>
-`;
+`
 
 export default async (req: NextApiRequest, res: NextApiResponse) => {
-  const { pathname } = req.query;
+  const { pathname } = req.query
   // console.log('pathname: ', pathname);
   // console.log('slug: ', slug);
 
-  const noteItem = await getNoteItem(pathname as string);
+  const noteItem = await getNoteItem(pathname as string)
   // console.log('htmlrewrite noteItem: ', noteItem);
   if (noteItem === undefined) {
-    res.statusCode = 404;
+    res.statusCode = 404
     res.end(
       'Notes Not Found, Make sure you have the correct pathname and check your Craft.do setting page.',
-    );
-    return;
+    )
+    return
   }
-  const craftUrl = noteItem.link;
+  const craftUrl = noteItem.link
 
   // console.log('htmlrewrite craftUrl: ', craftUrl)
-  const response = await fetch(craftUrl);
-  const originResText = await response.text();
+  const response = await fetch(craftUrl)
+  const originResText = await response.text()
   const modifyResText = originResText
     .replace('<meta name="robots" content="noindex">', '')
     .replace(
@@ -232,20 +232,20 @@ export default async (req: NextApiRequest, res: NextApiResponse) => {
       '',
     )
     .replace('</head><body', `${headStr}</head><body`)
-    .replace('</body></html>', `${bodyStr}</body></html>`);
+    .replace('</body></html>', `${bodyStr}</body></html>`)
 
-  res.setHeader('Content-Type', 'text/html; charset=utf-8');
-  res.send(modifyResText);
-};
+  res.setHeader('Content-Type', 'text/html; charset=utf-8')
+  res.send(modifyResText)
+}
 
 async function getNoteItem(path: string) {
-  const notesObj = await getAllNotes();
+  const notesObj = await getAllNotes()
   for (let i = 0; i < notesObj.length; i++) {
-    const noteItem = notesObj[i];
+    const noteItem = notesObj[i]
     // console.log('getNoteItem path: ', path);
     // console.log('getNoteItem noteItem: ', noteItem);
     if (path === noteItem.path)
-      return noteItem;
+      return noteItem
   }
 }
 

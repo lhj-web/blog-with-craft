@@ -51,4 +51,4 @@ export const lang = {
       CRAFTDOCS_ERROR: 'If you see this line, it means your Craft.do configuration page format is wrong.',
     },
   },
-};
+}

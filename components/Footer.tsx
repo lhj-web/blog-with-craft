@@ -1,14 +1,14 @@
-import { useRouter } from 'next/router';
-import BLOG from '@/blog.config';
-import { lang } from '@/lib/lang';
+import { useRouter } from 'next/router'
+import BLOG from '@/blog.config'
+import { lang } from '@/lib/lang'
 
 const Footer = () => {
-  const { locale } = useRouter();
-  const t = lang[locale as 'zh' | 'en'];
+  const { locale } = useRouter()
+  const t = lang[locale as 'zh' | 'en']
 
-  const d = new Date();
-  const y = d.getFullYear();
-  const from = +BLOG.since;
+  const d = new Date()
+  const y = d.getFullYear()
+  const from = +BLOG.since
 
   return (
     <div className="mt-6 flex-shrink-0 m-auto w-full text-gray-600 dark:text-gray-300 transition-all max-w-2xl px-4">
@@ -25,7 +25,7 @@ const Footer = () => {
         </div>
       </footer>
     </div>
-  );
-};
+  )
+}
 
-export default Footer;
+export default Footer

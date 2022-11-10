@@ -1,8 +1,8 @@
-import type { BlogConfig } from '@/interfaces/config';
+import type { BlogConfig } from '@/interfaces/config'
 
 const BLOG: BlogConfig = {
-  title: 'Name 6',
-  author: 'Name 6',
+  title: 'Lovell Liu',
+  author: 'Lovell Liu',
   link: 'https://blog.water6.ltd',
   description: '山光悦鸟性，潭影空人心',
   appearance: 'auto', // ['light', 'dark', 'auto'],
@@ -19,14 +19,14 @@ const BLOG: BlogConfig = {
   },
   notesLink: {
     index: '/',
-    blog: 'https://blog.water6.ltd/en',
-    contact: 'https://blog.water6.ltd/en/contact',
+    blog: 'https://lovelliu.me',
+    contact: 'https://lovelliu.me/contact',
   },
   socialLink: {
-    github: 'https://github.com/lhj-web',
+    github: 'https://github.com/lovelliu',
   },
   seo: {
-    keywords: ['Blog', 'Craft.do', 'Craft Docs', 'Next.js', 'Name 6', 'name6', 'notes', '笔记', 'Name 6的博客', 'Name 6的笔记'],
+    keywords: ['Blog', 'Craft.do', 'Craft Docs', 'Next.js', 'Lovell Liu', 'lovelliu', 'notes', 'Lovell Liu的博客'],
   },
   // analytics: {
   //   provider: '',
@@ -36,6 +36,6 @@ const BLOG: BlogConfig = {
   //   },
   // },
   isProd: process.env.VERCEL_ENV === 'production', // distinguish between development and production environment (ref: https://vercel.com/docs/environment-variables#system-environment-variables)
-};
+}
 
-export default BLOG;
+export default BLOG
