@@ -30,7 +30,7 @@
   },
   "devDependencies": {
     "@heroicons/react": "^1.0.6",
-    "@lovelliu/eslint-config": "^0.0.2",
+    "@lovelliu/eslint-config": "^0.0.9",
     "@types/node": "^18.6.1",
     "@types/react": "^18.0.15",
     "autoprefixer": "^10.4.7",
