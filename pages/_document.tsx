@@ -1,6 +1,8 @@
 import type { DocumentContext } from 'next/document'
 import Document, { Head, Html, Main, NextScript } from 'next/document'
 import BLOG from '@/blog.config'
+
+/* eslint-disable @typescript-eslint/no-var-requires */
 const { theme: { extend: { colors: { day, night } } } } = require('tailwind.config')
 
 class MyDocument extends Document {
