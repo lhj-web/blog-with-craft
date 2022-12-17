@@ -1,6 +1,6 @@
 /** @type {import('next-sitemap').IConfig} */
 const config = {
-  siteUrl: 'https://blog.water6.ltd',
+  siteUrl: 'https://lovelliu.me',
   generateRobotsTxt: true, // (optional)
   sitemapSize: 7000,
   // ...other options
