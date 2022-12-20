@@ -1,6 +1,6 @@
 const { fontFamily } = require('tailwindcss/defaultTheme')
 
-const themeColors = {
+const themeColor = {
   lightBackground: '#F6F8FA',
   darkBackground: '#212936',
 }
@@ -14,10 +14,10 @@ module.exports = {
     extend: {
       colors: {
         day: {
-          DEFAULT: themeColors.lightBackground || '#ffffff',
+          DEFAULT: themeColor.lightBackground || '#ffffff',
         },
         night: {
-          DEFAULT: themeColors.darkBackground || '#000000',
+          DEFAULT: themeColor.darkBackground || '#000000',
         },
       },
       fontFamily: {

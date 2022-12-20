@@ -16,14 +16,14 @@ html {
   scrollbar-color: var(--thumbBG) var(--scrollbarBG);
 }
 html::-webkit-scrollbar-track {
-  background: var(--scrollbarBG);
+  background-color: var(--scrollbarBG);
 }
 html::-webkit-scrollbar-thumb {
   background-color: var(--thumbBG);
 }
 
 ::selection {
-  background: rgba(45, 170, 219, 0.3);
+  background-color: rgba(45, 170, 219, 0.3);
 }
 
 .sticky-nav {
